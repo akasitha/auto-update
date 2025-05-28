@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>Mock Booking Page</title>
-  <style>
+<meta charset="utf-8"/>
+<title>Mock Booking Page</title>
+<style>
   .branch-item {
     cursor: pointer;
     padding: 5px;
@@ -58,13 +59,120 @@
 }
 
 </style>
+<style>
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e293b; /* deep slate background */
+  padding: 20px;
+  color: #f1f5f9; /* light text */
+}
+.register {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #22c55e;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.drawer-detail {
+  background-color: #334155;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
+}
+.drawer-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.branch-item {
+  padding: 10px;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  margin: 6px 4px;
+  display: inline-block;
+  background-color: #475569;
+  transition: background-color 0.2s;
+}
+.branch-item:hover {
+  background-color: #64748b;
+}
+.branch-item.is_full {
+  background-color: #334155;
+  color: #9ca3af;
+}
+.dateButtons, .times.paddingBottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.MuiPickersDay-root, .timeButtons {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #475569;
+  color: #f1f5f9;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.MuiPickersDay-root:hover, .timeButtons:hover {
+  background-color: #22c55e;
+  color: white;
+}
+.timeButtons.disabledTime {
+  background-color: #1e293b;
+  color: #64748b;
+  cursor: not-allowed;
+}
+.next-btn, .Next.center-text-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #6366f1, #4f46e5);
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.next-btn:hover, .Next.center-text-btn:hover {
+  opacity: 0.9;
+}
+.ant-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+.ant-checkbox-input {
+  margin-right: 8px;
+}
 
-</head>
+.header-banner {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #4f46e5, #6366f1);
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+</style></head>
 <body>
-  <div class="register" style="background-color: rgb(0, 200, 0);">Register</div>
+<div class="header-banner">
+<h1>🚀 JXS Rocket Test Drive</h1>
+</div>
 
-  <div class="drawer-detail">
-    <div class="drawer-title">Select Branch</div>
+<div class="register" style="background-color: rgb(0, 200, 0);">Register</div>
+<div class="drawer-detail">
+<div class="drawer-title">Select Branch</div>
 <div class="branch-item">Terminal 21</div>
 <div class="branch-item">Central Ladprao</div>
 <div class="branch-item">Siam Center</div>
@@ -78,83 +186,73 @@
 <div class="branch-item">Central Westgate</div>
 <div class="branch-item">Central Chiangmai</div>
 <div class="btn-section"><button class="next-btn">Next</button></div>
-  </div>
-  <div class="dateSection">
+</div>
+<div class="dateSection">
 <div class="dateButtons">
-  <span>วันที่:</span>
-  <button class="MuiPickersDay-root">1</button>
-  <button class="MuiPickersDay-root">2</button>
-  <button class="MuiPickersDay-root">3</button>
-  <button class="MuiPickersDay-root">4</button>
-  <button class="MuiPickersDay-root">5</button>
-  <button class="MuiPickersDay-root">6</button>
-  <button class="MuiPickersDay-root">7</button>
-  <button class="MuiPickersDay-root">8</button>
-  <button class="MuiPickersDay-root">9</button>
-  <button class="MuiPickersDay-root">10</button>
-  <button class="MuiPickersDay-root">11</button>
-  <button class="MuiPickersDay-root">12</button>
-  <button class="MuiPickersDay-root">13</button>
-  <button class="MuiPickersDay-root">14</button>
-  <button class="MuiPickersDay-root">15</button>
-  <button class="MuiPickersDay-root">16</button>
-  <button class="MuiPickersDay-root">17</button>
-  <button class="MuiPickersDay-root">18</button>
-  <button class="MuiPickersDay-root">19</button>
-  <button class="MuiPickersDay-root">20</button>
-  <button class="MuiPickersDay-root">21</button>
-  <button class="MuiPickersDay-root">22</button>
-  <button class="MuiPickersDay-root">23</button>
-  <button class="MuiPickersDay-root">24</button>
-  <button class="MuiPickersDay-root">25</button>
-  <button class="MuiPickersDay-root">26</button>
-  <button class="MuiPickersDay-root">27</button>
-  <button class="MuiPickersDay-root">28</button>
-  <button class="MuiPickersDay-root">29</button>
-  <button class="MuiPickersDay-root">30</button>
-  <button class="MuiPickersDay-root">31</button>
+<span>วันที่:</span>
+<button class="MuiPickersDay-root">1</button>
+<button class="MuiPickersDay-root">2</button>
+<button class="MuiPickersDay-root">3</button>
+<button class="MuiPickersDay-root">4</button>
+<button class="MuiPickersDay-root">5</button>
+<button class="MuiPickersDay-root">6</button>
+<button class="MuiPickersDay-root">7</button>
+<button class="MuiPickersDay-root">8</button>
+<button class="MuiPickersDay-root">9</button>
+<button class="MuiPickersDay-root">10</button>
+<button class="MuiPickersDay-root">11</button>
+<button class="MuiPickersDay-root">12</button>
+<button class="MuiPickersDay-root">13</button>
+<button class="MuiPickersDay-root">14</button>
+<button class="MuiPickersDay-root">15</button>
+<button class="MuiPickersDay-root">16</button>
+<button class="MuiPickersDay-root">17</button>
+<button class="MuiPickersDay-root">18</button>
+<button class="MuiPickersDay-root">19</button>
+<button class="MuiPickersDay-root">20</button>
+<button class="MuiPickersDay-root">21</button>
+<button class="MuiPickersDay-root">22</button>
+<button class="MuiPickersDay-root">23</button>
+<button class="MuiPickersDay-root">24</button>
+<button class="MuiPickersDay-root">25</button>
+<button class="MuiPickersDay-root">26</button>
+<button class="MuiPickersDay-root">27</button>
+<button class="MuiPickersDay-root">28</button>
+<button class="MuiPickersDay-root">29</button>
+<button class="MuiPickersDay-root">30</button>
+<button class="MuiPickersDay-root">31</button>
 </div>
 </div>
-  <div class="times paddingBottom">
-    <span>เวลา:</span>
-    <button class="timeButtons">10:00</button>
-    <button class="timeButtons disabledTime">10:30</button>
-    <button class="timeButtons">11:00</button>
-    <button class="timeButtons">11:30</button>
-    <button class="timeButtons">12:00</button>
-    <button class="timeButtons">12:30</button>
-    <button class="timeButtons">13:00</button>
-    <button class="timeButtons">13:30</button>
-    <button class="timeButtons">14:00</button>
-    <button class="timeButtons">14:30</button>
-    <button class="timeButtons">15:00</button>
-    <button class="timeButtons">15:30</button>
-    <button class="timeButtons">16:00</button>
-    <button class="timeButtons">16:30</button>
-    <button class="timeButtons">17:00</button>
-    <button class="timeButtons">17:30</button>
-    <button class="timeButtons">18:00</button>
-    <button class="timeButtons">18:30</button>
-    <button class="timeButtons">19:00</button>
-  </div>
-
-  <div class="datePicketButSection">
-    <button class="Next center-text-btn">Confirm</button>
-  </div>
-
-  <label class="ant-checkbox-wrapper">
-    <input class="ant-checkbox-input" type="checkbox" name="acceptTermsAndConditions">
-    <span>ยอมรับ</span>
-  </label>
-
-  <button type="submit" class="next-btn">Confirm Booking</button>
-
-  
-
-
-
-
-
+<div class="times paddingBottom">
+<span>เวลา:</span>
+<button class="timeButtons">10:00</button>
+<button class="timeButtons disabledTime">10:30</button>
+<button class="timeButtons">11:00</button>
+<button class="timeButtons">11:30</button>
+<button class="timeButtons">12:00</button>
+<button class="timeButtons">12:30</button>
+<button class="timeButtons">13:00</button>
+<button class="timeButtons">13:30</button>
+<button class="timeButtons">14:00</button>
+<button class="timeButtons">14:30</button>
+<button class="timeButtons">15:00</button>
+<button class="timeButtons">15:30</button>
+<button class="timeButtons">16:00</button>
+<button class="timeButtons">16:30</button>
+<button class="timeButtons">17:00</button>
+<button class="timeButtons">17:30</button>
+<button class="timeButtons">18:00</button>
+<button class="timeButtons">18:30</button>
+<button class="timeButtons">19:00</button>
+</div>
+<div class="datePicketButSection">
+<button class="Next center-text-btn">Confirm</button>
+</div>
+<label class="ant-checkbox-wrapper">
+<input class="ant-checkbox-input" name="acceptTermsAndConditions" type="checkbox"/>
+<span>ยอมรับ</span>
+</label>
+<button class="next-btn" type="submit">Confirm Booking</button>
 <style>
   .highlight {
     outline: 2px solid #4CAF50 !important;
@@ -242,7 +340,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
-
-
 </body>
 </html>
