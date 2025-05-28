@@ -4,11 +4,61 @@
   <meta charset="UTF-8">
   <title>Mock Booking Page</title>
   <style>
-    .branch-item { cursor: pointer; padding: 5px; border: 1px solid #ccc; margin: 2px; }
-    .is_full { background: #eee; color: #888; pointer-events: none; }
-    .timeButtons { margin: 2px; padding: 4px; cursor: pointer; }
-    .disabledTime { background-color: #ccc; pointer-events: none; }
-  </style>
+  .branch-item {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 2px;
+  }
+
+  .is_full {
+    background: #eee;
+    color: #888;
+    pointer-events: none;
+  }
+
+  .timeButtons {
+    margin: 2px;
+    padding: 4px;
+    cursor: pointer;
+  }
+
+  .disabledTime {
+    background-color: #ccc;
+    pointer-events: none;
+  }
+
+  .times.paddingBottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 6px;
+  }
+
+  .MuiPickersDay-root {
+    padding: 6px 10px;
+    min-width: 40px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .highlight {
+    outline: 2px solid #4CAF50 !important;
+    box-shadow: 0 0 0 3px #c2f0c2 inset !important;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  .dateButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-start;
+  margin-top: 6px;
+}
+
+</style>
+
 </head>
 <body>
   <div class="register" style="background-color: rgb(0, 200, 0);">Register</div>
@@ -29,14 +79,63 @@
 <div class="branch-item">Central Chiangmai</div>
 <div class="btn-section"><button class="next-btn">Next</button></div>
   </div>
-
+  <div class="dateSection">
+<div class="dateButtons">
+  <span>วันที่:</span>
+  <button class="MuiPickersDay-root">1</button>
+  <button class="MuiPickersDay-root">2</button>
+  <button class="MuiPickersDay-root">3</button>
+  <button class="MuiPickersDay-root">4</button>
+  <button class="MuiPickersDay-root">5</button>
+  <button class="MuiPickersDay-root">6</button>
+  <button class="MuiPickersDay-root">7</button>
+  <button class="MuiPickersDay-root">8</button>
+  <button class="MuiPickersDay-root">9</button>
+  <button class="MuiPickersDay-root">10</button>
+  <button class="MuiPickersDay-root">11</button>
+  <button class="MuiPickersDay-root">12</button>
+  <button class="MuiPickersDay-root">13</button>
+  <button class="MuiPickersDay-root">14</button>
+  <button class="MuiPickersDay-root">15</button>
+  <button class="MuiPickersDay-root">16</button>
+  <button class="MuiPickersDay-root">17</button>
+  <button class="MuiPickersDay-root">18</button>
+  <button class="MuiPickersDay-root">19</button>
+  <button class="MuiPickersDay-root">20</button>
+  <button class="MuiPickersDay-root">21</button>
+  <button class="MuiPickersDay-root">22</button>
   <button class="MuiPickersDay-root">23</button>
   <button class="MuiPickersDay-root">24</button>
-
+  <button class="MuiPickersDay-root">25</button>
+  <button class="MuiPickersDay-root">26</button>
+  <button class="MuiPickersDay-root">27</button>
+  <button class="MuiPickersDay-root">28</button>
+  <button class="MuiPickersDay-root">29</button>
+  <button class="MuiPickersDay-root">30</button>
+  <button class="MuiPickersDay-root">31</button>
+</div>
+</div>
   <div class="times paddingBottom">
+    <span>เวลา:</span>
     <button class="timeButtons">10:00</button>
     <button class="timeButtons disabledTime">10:30</button>
+    <button class="timeButtons">11:00</button>
+    <button class="timeButtons">11:30</button>
     <button class="timeButtons">12:00</button>
+    <button class="timeButtons">12:30</button>
+    <button class="timeButtons">13:00</button>
+    <button class="timeButtons">13:30</button>
+    <button class="timeButtons">14:00</button>
+    <button class="timeButtons">14:30</button>
+    <button class="timeButtons">15:00</button>
+    <button class="timeButtons">15:30</button>
+    <button class="timeButtons">16:00</button>
+    <button class="timeButtons">16:30</button>
+    <button class="timeButtons">17:00</button>
+    <button class="timeButtons">17:30</button>
+    <button class="timeButtons">18:00</button>
+    <button class="timeButtons">18:30</button>
+    <button class="timeButtons">19:00</button>
   </div>
 
   <div class="datePicketButSection">
