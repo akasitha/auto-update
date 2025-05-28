@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Mock Booking Page</title>
+  <style>
+    .branch-item { cursor: pointer; padding: 5px; border: 1px solid #ccc; margin: 2px; }
+    .is_full { background: #eee; color: #888; pointer-events: none; }
+    .timeButtons { margin: 2px; padding: 4px; cursor: pointer; }
+    .disabledTime { background-color: #ccc; pointer-events: none; }
+  </style>
+</head>
+<body>
+  <div class="register" style="background-color: rgb(0, 200, 0);">Register</div>
+
+  <div class="drawer-detail">
+    <div class="drawer-title">Select Branch</div>
+<div class="branch-item">Terminal 21</div>
+<div class="branch-item">Central Ladprao</div>
+<div class="branch-item">Siam Center</div>
+<div class="branch-item">Fashion Island</div>
+<div class="branch-item">Centralworld</div>
+<div class="branch-item">MEGABANGNA</div>
+<div class="branch-item">Siam Square</div>
+<div class="branch-item is_full">Emsphere<div class="branch-full">Full</div></div>
+<div class="branch-item">Central Pattaya</div>
+<div class="branch-item">Seacon Square</div>
+<div class="branch-item">Central Westgate</div>
+<div class="branch-item">Central Chiangmai</div>
+<div class="btn-section"><button class="next-btn">Next</button></div>
+  </div>
+
+  <button class="MuiPickersDay-root">23</button>
+  <button class="MuiPickersDay-root">24</button>
+
+  <div class="times paddingBottom">
+    <button class="timeButtons">10:00</button>
+    <button class="timeButtons disabledTime">10:30</button>
+    <button class="timeButtons">12:00</button>
+  </div>
+
+  <div class="datePicketButSection">
+    <button class="Next center-text-btn">Confirm</button>
+  </div>
+
+  <label class="ant-checkbox-wrapper">
+    <input class="ant-checkbox-input" type="checkbox" name="acceptTermsAndConditions">
+    <span>ยอมรับ</span>
+  </label>
+
+  <button type="submit" class="next-btn">Confirm Booking</button>
+
+  
+
+
+
+
+
+<style>
+  .highlight {
+    outline: 2px solid #4CAF50 !important;
+    box-shadow: 0 0 0 3px #c2f0c2 inset !important;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const logClick = (label) => console.log("🖱️ Clicked:", label);
+  const $ = (sel) => document.querySelector(sel);
+  const show = el => el && (el.style.display = 'block');
+
+  const register = $('.register');
+  const drawer = $('.drawer-detail');
+  const days = document.querySelectorAll('.MuiPickersDay-root');
+  const times = $('.times');
+  const checkboxWrap = $('.ant-checkbox-wrapper');
+  const checkbox = $('.ant-checkbox-input');
+  const confirmSection = $('.datePicketButSection');
+  const confirmBooking = $('button.next-btn');
+
+  // แสดงทั้งหมดตั้งแต่เริ่ม
+  show(register);
+  show(drawer);
+  days.forEach(d => show(d));
+  show(times);
+  show(confirmSection);
+  show(confirmBooking);
+  show(checkboxWrap);
+
+  const highlight = (el) => {
+    if (!el) return;
+    el.classList.add('highlight');
+  };
+
+  document.addEventListener('click', (e) => {
+    const el = e.target;
+    const label = el.textContent.trim().toLowerCase();
+    logClick(label);
+
+    if (el.classList.contains('register') || el.closest('.register')) {
+      highlight(el.closest('.register') || el);
+      return;
+    }
+
+    if (el.closest('.branch-item')) {
+      highlight(el.closest('.branch-item'));
+      return;
+    }
+
+    if (el.closest('.MuiPickersDay-root')) {
+      highlight(el.closest('.MuiPickersDay-root'));
+      return;
+    }
+
+    if (el.closest('.timeButtons')) {
+      highlight(el.closest('.timeButtons'));
+      return;
+    }
+
+    if (label === "next") {
+      highlight(el.closest('button'));
+      return;
+    }
+
+    if (label === "confirm") {
+      highlight(el.closest('button'));
+      return;
+    }
+
+    if (el.closest('input[type="checkbox"]')) {
+      if (checkbox.checked) {
+        show(confirmBooking);
+        console.log("✅ Step: Final Confirm shown");
+      }
+      highlight(el.closest('label') || el);
+      return;
+    }
+
+    if (el.closest('button.next-btn') && label === "confirm booking") {
+      highlight(el.closest('button.next-btn'));
+      return;
+    }
+  });
+});
+</script>
+
+
+</body>
+</html>
